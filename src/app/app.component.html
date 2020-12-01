@@ -1,0 +1,119 @@
+
+<div class="container Date -3">
+  <h2>Pipes Demo Appdate</h2>
+  <hr>
+
+  <table class="table table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Variable</th>
+        <th scope="col">Pipe code</th>
+        <th scope="col">Result</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>{{name}}</td>
+        <td>uppercase</td>
+        <td>{{name| uppercase}}</td>
+      </tr>
+
+      <tr>
+        <td>{{name}}</td>
+        <td>lowercase</td>
+        <td>{{name | lowercase}}</td>
+      </tr>
+
+      <tr>
+        <td>{{name}}</td>
+        <td>slice:0:4</td>
+        <td>{{name | slice:0:4}}</td>
+      </tr>
+
+      <tr>
+        <td>{{myArray}}</td>
+        <td>slice:0:4</td>
+        <td>{{myArray | slice:0:4}}</td>
+      </tr>
+      
+      <tr>
+        <td>{{myArray}}</td>
+        <td>*ngFor=let number of myArray | slice:0:3</td>
+        <ul>
+          <li *ngFor="let number of myArray | slice:0:3">{{number}}</li>
+        </ul>
+      </tr>
+
+      <tr>
+        <td>{{PI}}</td>
+        <td>number</td>
+        <td>{{PI | number}}</td>
+      </tr>
+
+      <tr>
+        <td>{{PI}} </td>
+        <td>number:'1.0-2'</td>
+        <td>{{PI | number:'1.0-2'}} </td>
+      </tr>
+
+      <tr>
+        <td>{{myNum}}</td>
+        <td>percent</td>
+        <td>{{myNum | percent}} </td>
+      </tr>
+
+      <tr>
+        <td>{{myNum}}</td>
+        <td>percent</td>
+        <td>{{myNum | percent}} </td>
+      </tr>
+     
+      <tr>
+        <td>{{myNum}}</td>
+        <td>percent:'2.2-2'</td>
+        <td>{{myNum | percent:'2.2-2'}} </td>
+      </tr>
+
+      <tr>
+        <td>{{salary}}</td>
+        <td>currency</td>
+        <td>{{salary | currency}} </td>
+      </tr>
+
+      <tr>
+        <td>{{salary}}</td>
+        <td>currency: 'EUR'</td>
+        <td>{{salary | currency: 'EUR'}} </td>
+      </tr>
+
+      <tr>
+        <td>{{nerd}}</td>
+        <td>json</td>
+        <td>{{nerd | json}} </td>
+      </tr>
+
+      <tr>
+        <td>{{myDate}}</td>
+        <td>date</td>
+        <td>{{myDate | date}} </td>
+      </tr>
+
+      <tr>
+        <td>Practica SPA en Youtube</td>
+        <td>{{video}}</td>
+        <td><iframe width="560" height="315" [src]="video | MIpipe:'https://www.youtube.com/embed/'" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </td>
+      </tr>  
+    
+    </tbody>
+  </table> 
+ 
+</div>
+
+
+
+
+
+
